@@ -57,7 +57,7 @@ function LogInCard() {
         setprocessing(true)
         try {
             const { name, email, password } = formData
-            const response = await fetch('http://localhost:8000/api/user/signup', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_ENDPOINT}/api/user/signup`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
@@ -87,7 +87,7 @@ function LogInCard() {
         setprocessing(true)
         try {
             const { email, password } = formData
-            const response = await fetch('http://localhost:8000/api/user/login', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_ENDPOINT}/api/user/login`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
