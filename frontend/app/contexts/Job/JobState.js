@@ -42,7 +42,8 @@ function JobState(props) {
         headers: {
           'Content-Type': 'application/json',
           'token': localStorage.getItem('career-connect-token')
-        }
+        },
+        credentials: 'include' 
       })
 
       const data = await response.json()
@@ -64,7 +65,8 @@ function JobState(props) {
           'Content-Type': 'application/json',
           'token': localStorage.getItem('career-connect-token')
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formData),
+        credentials: 'include' 
       })
 
       const data = await response.json()
@@ -83,7 +85,8 @@ function JobState(props) {
         headers: {
           'Content-Type': 'application/json',
           'token': localStorage.getItem('career-connect-token')
-        }
+        },
+        credentials: 'include' 
       })
 
       const data = await response.json()
@@ -103,7 +106,8 @@ function JobState(props) {
         headers: {
           'Content-Type': 'application/json',
           'token': localStorage.getItem('career-connect-token')
-        }
+        },
+        credentials: 'include' 
       })
       
       const data = await response.json()
@@ -125,7 +129,8 @@ function JobState(props) {
         headers: {
           'Content-Type': 'application/json',
           'token': localStorage.getItem('career-connect-token')
-        }
+        },
+        credentials: 'include' 
       })
 
       const data = await response.json()
@@ -148,7 +153,8 @@ function JobState(props) {
           'Content-Type': 'application/json',
           'token': localStorage.getItem('career-connect-token')
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formData),
+        credentials: 'include' 
       })
 
       const data = await response.json()

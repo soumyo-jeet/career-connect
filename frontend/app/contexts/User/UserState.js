@@ -16,7 +16,8 @@ function UserState(props) {
                 headers: {
                     'Content-Type': 'application/json',
                     'token': localStorage.getItem('career-connect-token')
-                }
+                },
+                credentials: 'include' 
             })
 
             const data = await response.json()
@@ -38,7 +39,8 @@ function UserState(props) {
                     'Content-Type': 'application/json',
                     'token': localStorage.getItem('career-connect-token')
                 },
-                body: JSON.stringify({skills, interests, experience, prof, worksAt})
+                body: JSON.stringify({skills, interests, experience, prof, worksAt}),
+                credentials: 'include' 
             })
 
             const data = await response.json()
@@ -59,6 +61,7 @@ function UserState(props) {
                     'Content-Type': 'application/json',
                     'token': localStorage.getItem('career-connect-token')
                 },
+                credentials: 'include' 
             })
 
             const data = await response.json()

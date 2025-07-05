@@ -62,6 +62,7 @@ function LogInCard() {
                 headers: {
                     'Content-Type': 'application/json',
                 },
+                credentials: 'include' ,
                 body: JSON.stringify({ name, email, password })
             })
 
@@ -92,6 +93,7 @@ function LogInCard() {
                 headers: {
                     'Content-Type': 'application/json',
                 },
+                credentials: 'include' ,
                 body: JSON.stringify({ email, password })
             })
 
