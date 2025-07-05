@@ -1,6 +1,6 @@
 "use client"
 import React, { useContext, useEffect, useState } from 'react'
-import ApplyForm from './_components/applyForm'
+import ApplyForm from './_components/ApplyForm'
 import UserContext from '@/app/contexts/User/UserContext'
 
 function page() {
