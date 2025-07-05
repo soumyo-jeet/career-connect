@@ -23,7 +23,12 @@ app.use('/api/application', require('./routes/application'))
 
 
 
-// sever porting
-app.listen(PORT, () => {
-    console.log(`server is running at http://localhost:${PORT}`)
-})
+// vercel
+module.exports = app;
+
+//localhost
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
+}
