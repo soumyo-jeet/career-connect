@@ -13,9 +13,7 @@ function JobCreate() {
     const jobContext = useContext(Jobcontext)
     const { jobs } = jobContext
 
-    useEffect(() => {
-        console.log(jobs)
-    }, [])
+   
 
     return (
         <div className='grid gid-cols-1 gap-6'>

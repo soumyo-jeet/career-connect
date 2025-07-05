@@ -42,6 +42,7 @@ function Page() {
   const userContext = useContext(UserContext)
   const { fetchJobs, fetchFilteredJobs, filteredJobs, jobs } = jobContext
   const { fetchUser, user } = userContext
+  const [done, setdone] = useState(false)
 
 
 
@@ -55,9 +56,7 @@ function Page() {
   useEffect(() => {
     if (!localStorage.getItem("career-connect-token")) redirect("/login")
     else {
-      fetchJobs()
-      fetchFilteredJobs()
-      fetchUser()
+      fetchUser().then(() => fetchFilteredJobs()).then(() => fetchJobs()).then(() => setdone(true))   
     }
   }, [])
 
@@ -85,7 +84,7 @@ function Page() {
           </div>
         </header>
         {
-          (!user && !jobs) ? <div>Loading...</div> : (
+          (!user && !jobs && !done) ? <div>Loading...</div> : (
             <main className="flex-1 overflow-y-auto p-6 bg-gradient-to-b from-background/50 to-foreground/5">
               {/* Profile Warning */}
               {
