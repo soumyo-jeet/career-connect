@@ -9,7 +9,7 @@ connectTomongo()
 
 // cors policy
 app.use(cors({
-    origin: ["http://localhost:3000"],
+    origin: ["http://localhost:3000", "https://career-connect-soumyo.vercel.app"],
     credentials: true
 }))
 app.use(express.json())
